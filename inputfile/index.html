@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>inputfile</title>
+	<style type="text/css">
+		body {
+			padding: 0;
+			margin: 0 auto;
+			width: 40em;
+			font-size: 1em;
+			font-family: verdana, arial, sans-serif;
+			color: #666;
+		}
+		fieldset {
+			border: 0;
+			position: relative;
+		}
+		input {
+			border: 1px solid #333;
+			font-size: 2em;
+		}
+	
+		.hidden {
+			opacity: .01;
+			filter: alpha(opacity = 1);
+			position: absolute;
+			top: 0;
+			z-index: 10;
+			cursor:pointer;
+		}
+		div.fakefile {
+			position: absolute;
+			z-index: 5;
+			
+		}
+		input.fakefile {
+			width: 13em;
+			padding: 0.1em;
+			margin-right: .5em;
+		}
+		.btn {
+			position: relative;
+			padding: .5em;
+			height: 4em;
+			margin-top: -1em;
+			width: 8em;
+			border: 1px solid #999;
+			font-weight: bold;
+		}
+		.btn:hover {
+			border-color: #000;
+			cursor: default;
+		}
+	</style>
+</head>
+<body>
+	<article>
+			<h1>Inputfile demo</h1>
+			<p>Brought to you by <a href="http://wnas.nl/">Wilfred Nas</a></p>
+			<p>Below you will find a simple implementation of the input file plugin by <a href="http://wnas.nl/">wnas</a>. More documentation can be found in <a href="http://www.wnas.nl/inputfile-plugin">this</a> place.</p>
+			<p>to intiate the  function do:</p><pre><code>
+			jQuery('foobar').inputfile();
+		</code></pre>
+				<h2>NOTE  the input type file has to have an unique id.</h2><ol><li>it first add's a class to the input file (style / hide with css)</li><li>then we create a div with an input and a span (span for button)</li><li>on change we set the value of file in the text...</li><li>DONE</li></ol>
+					<p>Java script code can be found <a href="http://www.wnas.nl/js/plugins/autotab/autotab.min.js" title="full">here</a> and <a href="http://www.wnas.nl/js/plugins/autotab/autotab.js" title="min">here</a></p>
+			<fieldset>
+				<input type="file" value="choose" id="unique" />
+			</fieldset>
+	</article>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="js/inputfile.js"></script>
+	<script>
+
+		jQuery(document).ready(function() {
+			jQuery('#unique').inputfile();
+		});
+	</script>
+</body>
+</html>
