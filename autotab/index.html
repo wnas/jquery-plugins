@@ -5,6 +5,18 @@
 	<title>autotab</title>
 </head>
 <body>
-	
+	<article>
+		<h1>Autotab</h1>
+		<form action="#">
+			<input type="text" maxlength="2" autofocus />
+			<input type="text" maxlength="2" />
+			<input type="text" maxlength="4" />
+		</form>
+	</article>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="js/autotab.js"></script>
+	<script>
+		jQuery('input').autotab();
+	</script>
 </body>
 </html>
