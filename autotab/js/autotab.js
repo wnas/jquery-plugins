@@ -53,4 +53,4 @@ jQuery.fn.autotab = function (){
 				}
 		}
 	});
-}
+};
