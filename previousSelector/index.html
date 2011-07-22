@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Previous selector</title>
+	<style>
+		body { width: 40em;font-family:helvetica;color:#111;margin:0 auto;}
+		.active { color:orange;}
+	</style>
+</head>
+<body>
+	<article>
+		<h1>header before P</h1>
+		<p>paragraph</p>
+		<h1>header not before P</h1>
+		<section>
+			<p>paragraph in section</p>
+		</section>
+	</article>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>
+			
+
+		var selectPrevious = function(prev,next,cn){
+			$(prev+' + '+next).prev(prev).addClass(cn)
+		};
+		
+		selectPrevious('h1','p','active');
+	</script>
+</body>
+</html>
