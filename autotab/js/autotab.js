@@ -49,7 +49,7 @@ jQuery.fn.autotab = function (){
 				var maxlength = jQuery(this).attr('maxlength'); // get maxlength value
 				var inputlength = jQuery(this).val().length; // get the length of the text
 				if ( inputlength >= maxlength ){ // if the text is equal of more than the max length
-					jQuery(this).next('input[type="text"]').focus(); // set focus to the next text field
+					jQuery(this).next('input[type="text"], input[type="password"]').focus(); // set focus to the next text field
 				}
 		}
 	});
